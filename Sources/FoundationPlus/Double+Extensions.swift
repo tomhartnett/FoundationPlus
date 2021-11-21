@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Double {
+public extension Double {
     /// Returns a `String` representation of the given `Double` value with a minimum of zero digits past the decimal point and a maximum of one.
     var formattedText: String {
         let formatter = NumberFormatter()

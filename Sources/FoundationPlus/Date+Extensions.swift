@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     /// Returns an Int value equal to the hour of the given date.
     var hour: Int {
         let comps = Calendar.current.dateComponents([.hour], from: self)
