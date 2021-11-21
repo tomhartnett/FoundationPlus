@@ -1,3 +1,3 @@
 # FoundationPlus
 
-A description of this package.
+This package contains useful extension methods on Foundation types.
