@@ -25,6 +25,21 @@ final class DateTests: XCTestCase {
         XCTAssertEqual(target.hour, 8)
     }
 
+    func test_month() {
+        // When, Then
+        XCTAssertEqual(target.month, 11)
+    }
+
+    func test_monthName() {
+        // When, Then
+        XCTAssertEqual(target.monthName, "November")
+    }
+
+    func test_shortMonthSymbol() {
+        // When, Then
+        XCTAssertEqual(target.shortMonthSymbol, "Nov")
+    }
+
     func test_veryShortWeekdaySymbol() {
         // When, Then
         XCTAssertEqual(target.veryShortWeekdaySymbol, "S")

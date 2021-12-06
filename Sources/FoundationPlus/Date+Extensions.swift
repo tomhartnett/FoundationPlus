@@ -8,13 +8,34 @@
 import Foundation
 
 public extension Date {
-    /// Returns an Int value equal to the hour of the given date.
+    /// Returns an `Int` value equal to the hour of the given date.
     var hour: Int {
         let comps = Calendar.autoupdatingCurrent.dateComponents([.hour], from: self)
         guard let hour = comps.hour else {
             fatalError("Failed to get hour of \(self)")
         }
         return hour
+    }
+
+    /// Returns an `Int` value equal to the month of the given date.
+    var month: Int {
+        let comps = Calendar.autoupdatingCurrent.dateComponents([.month], from: self)
+        guard let month = comps.month else {
+            fatalError("Failed to get month of \(self)")
+        }
+        return month
+    }
+
+    /// Returns the name of the month of the given date.
+    var monthName: String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM"
+        return formatter.string(from: self)
+    }
+
+    /// Returns the `shortMonthSymbol` of the given date.
+    var shortMonthSymbol: String {
+        DateFormatter().shortMonthSymbols[self.month - 1]
     }
 
     /// Returns the `veryShortWeekdaySymbol` of the given date.
