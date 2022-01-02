@@ -41,4 +41,38 @@ final class DoubleTests: XCTestCase {
         // Then
         XCTAssertEqual(string, "2")
     }
+
+    func test_string_roundedUp() {// Given
+        // Given
+        let target: Double = 0.154321
+
+        // When
+        let string = target.string(maximumFractionDigits: 1)
+
+        // Then
+        XCTAssertEqual(string, "0.2")
+
+    }
+
+    func test_string_roundedDown() {
+        // Given
+        let target: Double = 0.12345
+
+        // When
+        let string = target.string(maximumFractionDigits: 1)
+
+        // Then
+        XCTAssertEqual(string, "0.1")
+    }
+
+    func test_string_withoutFraction() {
+        // Given
+        let target: Double = 2.0
+
+        // When
+        let string = target.string(maximumFractionDigits: 1)
+
+        // Then
+        XCTAssertEqual(string, "2")
+    }
 }
