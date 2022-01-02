@@ -30,6 +30,10 @@ final class DateTests: XCTestCase {
         XCTAssertEqual(target.month, 11)
     }
 
+    func test_year() {
+        XCTAssertEqual(target.year, 2021)
+    }
+
     func test_monthName() {
         // When, Then
         XCTAssertEqual(target.monthName, "November")

@@ -26,6 +26,15 @@ public extension Date {
         return month
     }
 
+    /// Returns an `Int` value equal to the year of the given date.
+    var year: Int {
+        let comps = Calendar.autoupdatingCurrent.dateComponents([.year], from: self)
+        guard let year = comps.year else {
+            fatalError("Failed to get year of \(self)")
+        }
+        return year
+    }
+
     /// Returns the name of the month of the given date.
     var monthName: String {
         let formatter = DateFormatter()
